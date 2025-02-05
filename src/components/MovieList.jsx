@@ -7,25 +7,24 @@ function MovieList(){
 
     const [moviesToDisplay, setMoviesToDisplay] = useState(movies);
 
+
     const deleteMovie = (movieId) => {
-        
         const newListOfMovies = moviesToDisplay.filter( (movie) => {
             // if(movie.id !== movieId){
             //     return true;
             // } else {
             //     return false;
             // }
-
             return movie.id !== movieId;
         });
-
         setMoviesToDisplay(newListOfMovies);
     }
 
+    
     return (
         <section className="MovieList">
 
-            <h2>List of movies:</h2>
+            <h2>Number of movies: {moviesToDisplay.length}</h2>
 
             {moviesToDisplay.map((movieObj) => {
                 return (
