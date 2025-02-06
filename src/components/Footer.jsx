@@ -1,7 +1,7 @@
 
 function Footer(){
     return (
-        <h1>this is Footer</h1>
+        <h4>Ironhack, 2025</h4>
     );
 }
 
