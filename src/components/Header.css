@@ -1,26 +1,4 @@
-.Header {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #fff;
-}
 
-.Header nav {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    border-bottom: 1px solid #fff;
-}
-
-.Header nav a {
-    padding: 0 1rem;
-    border-right: 1px solid #fff;
-    color: #fff;
-}
-
-.Header nav a.active {
-    color: #f5c518;
-}
-
-.Header nav a:last-child {
-    border-right: none;
+.Header h1 {
+    color: orange;
 }
