@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import MovieDetails from "./components/MovieDetails";
 import MovieList from "./pages/MovieList"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -25,6 +26,7 @@ function App() {
       <Header numberOfMovies={moviesToDisplay.length} />
       <Routes>
         <Route path="/" element={<MovieList moviesArr={moviesToDisplay} callbackToDelete={deleteMovie} />} />
+        <Route path="/movies/:movieId" element={<MovieDetails moviesArr={moviesToDisplay} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
