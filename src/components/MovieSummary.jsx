@@ -9,6 +9,8 @@ function MovieSummary(props) {
                 && <img src={props.movieDetails.imgURL} alt={props.movieDetails.title} />
             }
 
+            <p>Rating: {props.movieDetails.rating}</p>
+
             <div>
                 <button onClick={() => { props.callbackToDelete(props.movieDetails.id) }}>
                     Delete this movie
