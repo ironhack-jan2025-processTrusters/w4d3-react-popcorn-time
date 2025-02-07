@@ -14,6 +14,7 @@ function App() {
 
   const [moviesToDisplay, setMoviesToDisplay] = useState(movies);
   const [title, setTitle] = useState("");
+  const [rating, setRating] = useState("");
 
   const deleteMovie = (movieId) => {
     const newListOfMovies = moviesToDisplay.filter((movie) => {
@@ -25,9 +26,10 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     const newMovie = {
-      title: title
+      title: title,
+      rating: rating
     }
 
     const newList = [newMovie, ...moviesToDisplay];
@@ -36,6 +38,7 @@ function App() {
 
     // clear form
     setTitle("");
+    setRating("");
   }
 
   return (
@@ -47,12 +50,26 @@ function App() {
 
           <label>
             Title:
-            <input 
-              type="text" 
-              name="title" 
-              placeholder="enter the title" 
+            <input
+              type="text"
+              name="title"
+              required={true}
+              placeholder="enter the title"
               value={title}
               onChange={(e) => { setTitle(e.target.value) }}
+            />
+          </label>
+
+          <label>
+            Rating:
+            <input
+              type="number"
+              min={1}
+              max={10}
+              name="rating"
+              required={true}
+              value={rating}
+              onChange={(e) => { setRating(e.target.value) }}
             />
           </label>
 
