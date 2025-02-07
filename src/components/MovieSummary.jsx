@@ -4,7 +4,10 @@ function MovieSummary(props) {
     return (
         <div className="card">
             <p>{props.movieDetails.title}</p>
-            <img src={props.movieDetails.imgURL} alt={props.movieDetails.title} />
+
+            { props.movieDetails.imgURL 
+                && <img src={props.movieDetails.imgURL} alt={props.movieDetails.title} />
+            }
 
             <div>
                 <button onClick={() => { props.callbackToDelete(props.movieDetails.id) }}>

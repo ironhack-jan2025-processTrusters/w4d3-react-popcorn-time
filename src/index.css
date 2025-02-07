@@ -70,3 +70,9 @@ button:focus-visible {
 .btn-primary:hover {
   color: #1a1a1a;
 }
+
+.box {
+  outline: 1px solid #fff;
+  margin: 1rem;
+  padding: 1rem;
+}
