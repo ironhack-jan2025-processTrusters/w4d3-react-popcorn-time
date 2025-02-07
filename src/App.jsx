@@ -27,7 +27,12 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const movieIds = moviesToDisplay.map((movie) => movie.id);
+    const maxId = Math.max(...movieIds);
+    const nextId = maxId + 1;
+
     const newMovie = {
+      id: nextId,
       title: title,
       rating: rating
     }
